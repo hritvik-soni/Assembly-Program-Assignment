@@ -91,9 +91,13 @@ public class Main {
 
         }
 
-        // Invalid MV statement
+       // Invalid MV statement
         else {
-          if(Integer.parseInt(tokens[2])<0 ){
+          if (tokens.length!=3) {
+            System.out.println("Invalid MV statement: use valid format 'operation REG{number} value' ");
+
+          }
+          else if(Integer.parseInt(tokens[2])<0 ){
             System.out.println(" Invalid MV statement: Value cannot be less than 0");
           }
           else{
@@ -143,7 +147,10 @@ public class Main {
 
         // Invalid ADD statement
         else {
-          if(Integer.parseInt(tokens[2])<0 ){
+          if(tokens.length!=3){
+            System.out.println("Invalid ADD statement: use valid format 'operation REG{number} value' ");
+          }
+         else if(Integer.parseInt(tokens[2])<0 ){
             System.out.println(" Invalid Add statement: Value cannot be less than 0");
           }
           else{
